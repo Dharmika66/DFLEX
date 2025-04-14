@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dharmika | Friend Side</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient( left to right, #000000, #000000), url('assets/.png') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #e7e7e7;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #ffffff;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      opacity: 1 !important;
+    }
+
+    .highlight-text {
+      background-image: linear-gradient(270deg, rgb(239, 163, 87), rgb(216, 100, 239));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    /* === Card Animation Section === */
+    .hero {
+      position: relative;
+      width: 800px;
+      height: 400px;
+      margin: 0px auto;
+      padding-bottom: 75px;
+      padding-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      perspective: 1000px;
+    }
+
+    .card {
+      position: absolute;
+      width: 500px;
+      height: 450px;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 1s ease;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card.prev {
+      transform: translateX(-280px) scale(0.95);
+      opacity: 0.5;
+      filter: blur(6px);
+      z-index: 1;
+    }
+
+    .card.active {
+      transform: translateX(0) scale(1.05);
+      z-index: 3;
+      filter: blur(0);
+      opacity: 1;
+    }
+
+    .card.next {
+      transform: translateX(280px) scale(0.95);
+      opacity: 0.5;
+      filter: blur(6px);
+      z-index: 2;
+    }
+    .fade-section {
+  padding: 75px 40px;
+  display: flex;
+  justify-content: center;
+}
+.fade-container {
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+}
+.fade-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+}
+.fade-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.fade-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 400px;
+}
+@media (max-width: 768px) {
+  .fade-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.fade-section.alt .fade-container {
+  flex-direction: row-reverse;
+}
+.fade-section.alt .fade-text {
+  text-align: right;
+}
+.divider {
+  text-align: center;
+  padding-bottom: px;
+  color: #ffffff;
+
+}
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 999;
+  backdrop-filter: blur(8px);
+}
+.back-btn,
+.top-links a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: opacity 0.3s ease;
+  padding: auto;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  display: flex;
+}
+
+.back-btn:hover,
+.top-links a:hover {
+  opacity: 0.7;
+}
+
+.top-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  
+
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span class="highlight-text">Hey, I'm Dharmika!</span></h1>
+    <p>Welcome to my personal side — where I share the things I love.</p>
+    <div class="top-bar">
+      <a href="index.html" class="back-btn"><span class="highlight-text">🡸</span></a>
+      <div class="top-links">
+        <a href="https://www.instagram.com/dhaarmikashetty?igsh=MXQybDUzZnR0dzM0ag%3D%3D&utm_source=qr" target="_blank"><span class="highlight-text">@</span></a>
+        <a href="mailto:dharmikab66@gmail.com"><span class="highlight-text">✉<span class="highlight-text"></span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- === 3D Card Carousel Section === -->
+  <div class="hero">
+    <div class="card active"><img src="assets/photo1.jpg" alt="Card 1"></div>
+    <div class="card next"><img src="assets/photo6.png" alt="Card 2"></div>
+    <div class="card prev"><img src="assets/PICT22.jpg" alt="Card 3"></div>
+  </div>
+
+ <section class="divider">
+    <h1><span class="highlight-text">Candids</span></h1>
+  </section>
+  <!-- Section 1: -->
+  <section class="fade-section">
+    <div class="fade-container from-right">
+      <div class="fade-image">
+        <img src="assets/IMG3.jpg" alt="Chill Vibes" />
+      </div>
+      <div class="fade-text">
+        <h2><span class="highlight-text"> What I Love!</span></h2>
+        <p>I’m all about exploring new places, capturing vibes on camera, and finding beauty in everyday chaos. Whether it's baking, Netflix, or nature — this is where I shine.</p>
+        <p>-Glassboro,NJ</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section 2: -->
+<section class="fade-section alt">
+  <div class="fade-container from-left">
+    <div class="fade-text">
+      <h2><span class="highlight-text"> Weekend Getaways!</span></h2>
+      <p>Sometimes I just pack my bag, grab my camera, and hit the road. Hiking trails, scenic drives, and peaceful spots — they recharge my soul.</p>
+      <p>-Tampa,FL</p>
+    </div>
+    <div class="fade-image">
+      <img src="assets/IMG1.jpg" alt="Nature Trails" />
+    </div>
+  </div>
+</section>
+
+<!-- Section 3:  -->
+<section class="fade-section">
+  <div class="fade-container from-right">
+    <div class="fade-image">
+      <img src="assets/IMG6.PNG" alt="Baking Time" />
+    </div>
+    <div class="fade-text">
+      <h2><span class="highlight-text">Baking Time!</span></h2>
+      <p>I lose track of time when I’m in the kitchen. Cookies, cupcakes, or brownies — it’s the sweet therapy I didn’t know I needed.</p>
+      <p>-Bloomsburg,PA</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- External Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+
+  <!-- Card Rotation Script -->
+  <script>
+    const cards = document.querySelectorAll('.card');
+    let current = 0;
+    function rotateCards() {
+  cards.forEach(card => card.className = 'card');
+
+  const prev = (current + cards.length - 1) % cards.length;
+  const next = (current + 1) % cards.length;
+
+  cards[prev].classList.add('prev');
+  cards[current].classList.add('active');
+  cards[next].classList.add('next');
+
+  current = next;
+}
+
+// Run it immediately
+rotateCards();
+
+// Then repeat every 3 seconds
+setInterval(rotateCards, 3000);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+  
+    document.querySelectorAll(".fade-container").forEach(container => {
+      let xStart = 0;
+      let yStart = 50;
+  
+      if (container.classList.contains("from-left")) {
+        xStart = -100;
+        yStart = 0;
+      } else if (container.classList.contains("from-right")) {
+        xStart = 100;
+        yStart = 0;
+      }
+  
+      gsap.fromTo(container,
+        { opacity: 0, y: yStart, x: xStart },
+        {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          duration: 1.5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: container,
+            start: "top 80%",
+            toggleActions: "play reverse play reverse"  // key change
+          }
+        }
+      );
+    });
+  </script>
+</body>
+</html>

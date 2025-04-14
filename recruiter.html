@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dharmika | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 40px 20px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: auto;
+    }
+    header .intro {
+      text-align: left;
+    }
+    header img {
+      width: 100px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid #e50914;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+      color: #e50914;
+    }
+    header p {
+      font-size: 1.5rem;
+      color: #ccc;
+    }
+    .resume-btn {
+      background: #e50914;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav {
+      text-align:center; ;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px 0;
+    }
+    nav a {
+      color: #e50914;
+      text-decoration: none;
+      margin: 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .grid-box {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .grid-box:hover {
+      transform: scale(1.03);
+      background: rgba(229, 9, 20, 0.2);
+    }
+    .grid-box h2 {
+      color: #e50914;
+      margin-bottom: 15px;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .skill {
+      background: #595555;
+      padding: 8px 14px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .skill i {
+      font-size: 1rem;
+    }
+    .btn{
+      display: inline-block;
+      padding: 10px 20px;
+      background: #e50914;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #c40712;
+    }
+    .grid-box a {
+      color: #f5f5f5;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    .back-btn {
+     display: inline-block;
+    background: #1c1c1c;
+    padding: 6px 12px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    }
+.back-btn:hover {
+  background: #e50914;
+  color: #fff;
+  box-shadow: 0 0 10px #e50914;
+  transform: scale(1.05);
+}
+.skill {
+  position: relative;
+  cursor: pointer;
+}
+
+.skill::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 130%; /* position above the skill */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 0.85rem;
+  z-index: 10;
+}
+
+.skill:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+</style>
+</head>
+<body>
+  <a href="index.html" class="back-btn">🡸 </a>
+  <header>
+    <div class="intro">
+      <img src="assets/profile.jpg" alt="Dharmika Profile Photo">
+      <h1>Dharmika</h1>
+      <p>Developer | Data Analyst | Web Enthusiast</p>
+    </div>
+    <a class="resume-btn" href="assets/dharmika_resume.pdf" target="_blank">Download Resume</a>
+  </header>
+
+
+  <section class="grid-section">
+    <div class="grid-box">
+      <h2><i class="fas fa-code"></i> Technical Skills</h2>
+      <div class="skills">
+        <div class="skill" title="Structure your web content."><i class="fab fa-html5"></i> HTML5</div>
+        <div class="skill" title="Style your pages with colors, layout, and design."><i class="fab fa-css3-alt"></i> CSS3</div>
+        <div class="skill" title="Add interactivity and dynamic behavior."><i class="fab fa-js"></i> JavaScript</div>
+        <div class="skill" title="Server-side scripting for building dynamic websites."><i class="fab fa-php"></i> PHP</div>
+        <div class="skill" title="Query and manage relational databases."><i class="fas fa-database"></i> SQL</div>
+        <div class="skill" title="Data analysis, scripting, and AI applications."><i class="fab fa-python"></i> Python</div>
+        <div class="skill" title="Containerize applications for consistent environments."><i class="fab fa-docker"></i> Docker</div>
+       <div class="skill" title="CI/CD automation tool for deployments."><i class="fas fa-cogs"></i> Jenkins</div>
+       <div class="skill" title="Cloud computing services for app hosting and scaling."><i class="fab fa-aws"></i> AWS</div>
+      </div>
+    </div>
+
+    <div class="grid-box">
+      <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+      <p>Explore my technical and data analytics projects with code snippets and walkthroughs.</p>
+      <a href="recruiter_projects.html"class="btn">View Projects</a>
+    </div>
+
+    <div class="grid-box">
+      <h2><i class="fas fa-briefcase"></i> Experience</h2>
+      <p>Check out my work history, key roles, and past project Experience.</p>
+      <a href="recruiter_experiece.html"class="btn">View Experience</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Contact: dharmikab66@gmail.com | GitHub: github.com/dharmika66</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/landing.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

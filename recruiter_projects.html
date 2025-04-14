@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dharmika | Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/recruiter-projects.css">
+</head>
+<body>
+  
+  <!-- Sticky Navbar with Filters -->
+  <nav class="sticky-nav">
+    <div class="nav-left">
+      <a href="recruiter.html" class="back-arrow">
+        🡸
+       </a>
+    </div>
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="data">Data</button>
+      <button data-filter="devops">DevOps</button>
+    </div>
+  </nav>
+  <!-- Flip Cards Row -->
+  <div class="section-title">Projects</div>
+  <div class="flip-section">
+    <!-- Flip cards here (unchanged) -->
+
+      <div class="flip-card gsap-card" data-category="data">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h2>Data Visualization</h2>
+            <p>Seaborn + Python</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="assets/plot 2.png" alt="Cost of Living">
+            <a href="https://github.com/Dharmika66/cost-of-living-visualization" target="_blank">View GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card gsap-card" data-category="devops">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h2>Smart Service Booking Portal</h2>
+            <p>PHP + Bootstrap + Ajax + MySQL</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="assets/login page2.png" alt="Client Portal Preview">
+            <a href="https://github.com/Dharmika66/smart-service-boking-portal" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card gsap-card" data-category="data">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h2>E-commerce Data Exploration</h2>
+            <p>SQL + Python</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="assets/plot.png" alt="Ecommerce Viz">
+            <a href="https://github.com/Dharmika66/ecommerce-sales-insights" target="_blank">View GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card gsap-card" data-category="devops">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h2>CI/CD Pipeline</h2>
+            <p>Docker + Jenkins + AWS</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="assets/pic2.jpg" alt="CI/CD Pipeline">
+            <a href="pdfs/pdf1.pdf" target="_blank">View Full Code</a>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+
+  <hr class="section-divider"/>
+  <div class="section-title">AI Explorations</div>
+
+  <!-- Alternating Visual Sections with animation classes -->
+  <div class="alt-section animate-section">
+    <img class="animate-img" src="assets/A1.PNG" alt="Clean Data!">
+    <div class="alt-text animate-text">
+      <h2>AI Agents & Autonomous Workflows </h2>
+      <p>I’m constantly exploring AI agents that act like autonomous workers.
+         Tools like Auto-GPT and CrewAI can break down goals, decide what steps to take, 
+         and execute them with minimal human intervention. The future I see is filled with AI sidekicks that take tasks off our plates and make work smarter — not just faster.</p>
+    </div>
+  </div>
+
+  <div class="alt-section animate-section reverse">
+    <img class="animate-img" src="assets/A2.PNG" alt="Debugging!">
+    <div class="alt-text animate-text">
+      <h2>Open Source LLMs: LLaMA,Mistral & Beyond</h2>
+      <p>The open-source LLM movement excites me. Meta’s LLaMA, Mistral, and similar models let developers tinker, optimize, and deploy on their own terms. No API limits. No locked ecosystems. Just raw, customizable intelligence that levels the playing field for indie devs and small teams.</p>
+    </div>
+  </div>
+
+  <div class="alt-section animate-section">
+    <img class="animate-img" src="assets/A3.PNG" alt="Data Visualization">
+    <div class="alt-text animate-text">
+      <h2>LangChain, Vector DBs & RAG Systems</h2>
+      <p>
+        LangChain changed how I build AI pipelines. When paired with vector databases like Pinecone or ChromaDB, I can retrieve context-specific information and feed it into my models — creating AI that remembers, adapts, and understands more deeply. RAG systems make apps feel dynamic and smart, not just generative.</p>
+    </div>
+  </div>
+
+  <div class="alt-section animate-section reverse">
+    <img class="animate-img" src="assets/A4.PNG" alt="E-commerce Project">
+    <div class="alt-text animate-text">
+      <h2>Building Real Apps With AI(Flask + JS)</h2>
+      <p>My passion isn’t just learning AI — it’s about building with it. From backend logic in Flask to front-end magic in JavaScript, I integrate models into web apps that do real work. Whether it’s a chatbot, a custom tool, or a dashboard, I love taking ideas and pushing them all the way to something functional, polished, and usable.</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/recruiter-projects.js"></script>
+</body>
+</html>
